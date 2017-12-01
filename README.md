@@ -50,4 +50,15 @@ What we learned in this chapter
   *  Rails views can contain static HTML or embedded Ruby (ERb).
   *  Automated testing allows us to write test suites that drive the development of new features, allow for confident refactoring, and catch regressions.
   *  Test-driven development uses a “Red, Green, Refactor” cycle.
-  *  Rails layouts allow the use of a common template for pages in our application, thereby eliminating duplication. 
+  *  Rails layouts allow the use of a common template for pages in our application, thereby eliminating duplication.
+  * Ruby has a large number of methods for manipulating strings of characters.
+  * Everything in Ruby is an object.
+  * Ruby supports method definition via the def keyword.
+  * Ruby supports class definition via the class keyword.
+  * Rails views can contain static HTML or embedded Ruby (ERb).
+  * Built-in Ruby data structures include arrays, ranges, and hashes.
+  * Ruby blocks are a flexible construct that (among other things) allow natural iteration over enumerable data structures.
+  * Symbols are labels, like strings without any additional structure.
+  * Ruby supports object inheritance.
+  * It is possible to open up and modify built-in Ruby classes.
+  * The word “deified” is a palindrome. 
