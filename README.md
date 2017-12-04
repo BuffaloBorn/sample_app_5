@@ -77,3 +77,13 @@ For more information, see the
   * Sass and the asset pipeline allow us to eliminate duplication in our CSS while packaging up the results efficiently for production.
   * Rails allows us to define custom routing rules, thereby providing named routes.
   * Integration tests effectively simulate a browser clicking from page to page.
+
+####  Modeling users
+
+  * Migrations allow us to modify our application’s data model.
+  * Active Record comes with a large number of methods for creating and manipulating data models.
+  * Active Record validations allow us to place constraints on the data in our models.
+  * Common validations include presence, length, and format.
+  * Regular expressions are cryptic but powerful.
+  * Defining a database index improves lookup efficiency while allowing enforcement of uniqueness at the database level.
+  * We can add a secure password to a model using the built-in has_secure_password method.
