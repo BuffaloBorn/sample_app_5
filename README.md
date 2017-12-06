@@ -56,6 +56,11 @@ danger
 It failed.
 ```
 
+#### Useful rails task
+
+```bash
+$ rails db:migrate:reset
+```
 ### What we learned in this chapter
 
 #### Mostly static pages
