@@ -40,7 +40,21 @@ $ rails server
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
 
+#### Useful rails console snippet
 
+```bash
+$ rails console
+>> flash = { success: "It worked!", danger: "It failed." }
+=> {:success=>"It worked!", danger: "It failed."}
+>> flash.each do |key, value|
+?>   puts "#{key}"
+?>   puts "#{value}"
+>> end
+success
+It worked!
+danger
+It failed.
+```
 
 ### What we learned in this chapter
 
