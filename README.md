@@ -108,3 +108,17 @@ $ rails db:migrate:reset
   * Regular expressions are cryptic but powerful.
   * Defining a database index improves lookup efficiency while allowing enforcement of uniqueness at the database level.
   * We can add a secure password to a model using the built-in has_secure_password method.
+
+####  Sign up
+
+  * Rails displays useful debug information via the debug method.
+  * Sass mixins allow a group of CSS rules to be bundled and reused in multiple places.
+  * Rails comes with three standard environments: development, test, and production.
+  * We can interact with users as a resource through a standard set of REST URLs.
+  * Gravatars provide a convenient way of displaying images to represent users.
+  * The form_for helper is used to generate forms for interacting with Active Record objects.
+  * Signup failure renders the new user page and displays error messages automatically determined by Active Record.
+  * Rails provides the flash as a standard way to display temporary messages.
+  * Signup success creates a user in the database and redirects to the user show page, and displays a welcome message.
+  * We can use integration tests to verify form submission behavior and catch regressions.
+  * We can configure our production application to use SSL for secure communications and Puma for high performance.
