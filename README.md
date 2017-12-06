@@ -54,6 +54,8 @@ success
 It worked!
 danger
 It failed.
+>> User.find_by(email:"example@railstutorial.org")
+=> #<User id: 1, name: "Rails Tutorial", email: "example@railstutorial.org", created_at: "2017-12-06 01:04:13", updated_at: "2017-12-06 01:04:13", password_digest: "$2a$10$WwydSt3xyWmAcXGGUB5KgO.hmhuCZs3nSJ7trS/zcgy...">
 ```
 
 #### Useful rails task
