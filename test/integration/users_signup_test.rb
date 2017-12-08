@@ -25,5 +25,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'users/show'
     assert flash.now.notice = "Welcome to the Sample App!"
+    assert is_logged_in?
   end
 end
