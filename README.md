@@ -133,3 +133,13 @@ $ rails db:migrate:reset
   * Signup success creates a user in the database and redirects to the user show page, and displays a welcome message.
   * We can use integration tests to verify form submission behavior and catch regressions.
   * We can configure our production application to use SSL for secure communications and Puma for high performance.
+
+####  Basic login
+
+  * Rails can maintain state from one page to the next using temporary cookies via the session method.
+  * The login form is designed to create a new session to log a user in.
+  * The flash.now method is used for flash messages on rendered pages.
+  * Test-driven development is useful when debugging by reproducing the bug in a test.
+  * Using the session method, we can securely place a user id on the browser to create a temporary session.
+  * We can change features such as links on the layouts based on login status.
+  * Integration tests can verify correct routes, database updates, and proper changes to the layout.
