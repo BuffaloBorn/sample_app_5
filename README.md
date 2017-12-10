@@ -143,3 +143,12 @@ $ rails db:migrate:reset
   * Using the session method, we can securely place a user id on the browser to create a temporary session.
   * We can change features such as links on the layouts based on login status.
   * Integration tests can verify correct routes, database updates, and proper changes to the layout.
+
+#### Advance login
+
+  * Rails can maintain state from one page to the next using persistent cookies via the cookies method.
+  * We associate to each user a remember token and a corresponding remember digest for use in persistent sessions.
+  * Using the cookies method, we create a persistent session by placing a permanent remember token cookie on the browser.
+  * Login status is determined by the presence of a current user based on the temporary session’s user id or the permanent session’s unique remember token.
+  * The application signs users out by deleting the session’s user id and removing the permanent cookie from the browser.
+  * The ternary operator is a compact way to write simple if-then statements.
