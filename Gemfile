@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'faker',  '1.7.3'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
