@@ -8,6 +8,8 @@ class ActiveSupport::TestCase
   fixtures :all
   include ApplicationHelper
 
+#  self.use_transactional_tests = false
+
   # Returns true if a test user is logged in.
   def is_logged_in?
     !session[:user_id].nil?
