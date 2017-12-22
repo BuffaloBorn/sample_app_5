@@ -152,3 +152,19 @@ $ rails db:migrate:reset
   * Login status is determined by the presence of a current user based on the temporary session’s user id or the permanent session’s unique remember token.
   * The application signs users out by deleting the session’s user id and removing the permanent cookie from the browser.
   * The ternary operator is a compact way to write simple if-then statements.
+
+
+#### Updating, showing, and deleting users
+
+  * Users can be updated using an edit form, which sends a PATCH request to the update action.
+  * Safe updating through the web is enforced using strong parameters.
+  * Before filters give a standard way to run methods before particular controller actions.
+  * We implement an authorization using before filters.
+  * Authorization tests use both low-level commands to submit particular HTTP requests directly to controller actions and high-level integration tests.
+  * Friendly forwarding redirects users where they wanted to go after logging in.
+  * The users index page shows all users, one page at a time.
+  * Rails uses the standard file ```db/seeds.rb``` to seed the database with sample data using ```rails db:seed```.
+  * Running ```render @users``` automatically calls the ```_user.html.erb``` partial on each user in the collection.  
+  * A boolean attribute called admin on the User model automatically creates an admin? boolean method on user objects.
+  * Admins can delete users through the web by clicking on delete links that issue DELETE requests to the Users controller ```destroy``` action.
+  * We can create a large number of test users using embedded Ruby inside fixtures.
