@@ -74,6 +74,38 @@ $ rails db:migrate:reset
 | assert_select "a[href=?]", ’/’, count: 1 |	```<a href="/">foo</a>```  |
 | assert_select "a[href=?]", ’/’, text: "foo"	| ```<a href="/">foo</a>```|
 
+
+ ##### Table 7.1
+
+|HTTP request |	URL	| Action |	Named route |	Purpose |
+|---------|----------|------------|----------------|
+| GET	 | /users	| index |	users_path	|page to list all users |
+| GET	 | /users/1	| show	| user_path(user) |	page to show user |
+| GET	 | /users/new |	new |	new_user_path	|page to make a new user (signup)|
+| POST |	/users	| create	| users_path	| create a new user |
+| GET	 | /users/1/edit |	edit |	edit_user_path(user)	| page to edit user with id 1 |
+| PATCH| 	/users/1 |	update |	user_path(user)	| update user|
+| DELETE|	/users/1 | destroy |	user_path(user)	| delete user |
+###### *Table 7.1: RESTful routes provided by the Users resource in Listing 7.3.*
+
+ ##### Table 11.1
+
+| find by	|  string	 |   digest   | authentication |
+|---------|----------|------------|----------------|
+|  email  | password |	password_digest |	authenticate(password) |
+| id	    | remember_token |	remember_digest	| authenticated?(:remember, token) |
+| email	  | activation_token |	activation_digest |	authenticated?(:activation, token) |
+| email	  | reset_token	| reset_digest |	authenticated?(:reset, token) ||
+###### *Table 11.1: The analogy between login, remembering, account activation, and password reset.*
+
+ ##### Table 11.2
+
+| HTTP request	| URL	| Action	| Named route |
+|---------------|-----|---------|----------------|
+| GET	| http://ex.co/account_activation/<token>/edit	| edit |	edit_account_activation_url(token) |
+###### * Table 11.2: RESTful route provided by the Account Activations resource in this commit.*
+
+
 ### What we learned in this chapter
 
 #### Mostly static pages
