@@ -75,6 +75,22 @@ $ rails db:migrate:reset
 | assert_select "a[href=?]", ’/’, text: "foo"	| ```<a href="/">foo</a>```|
 
 
+##### Figure 11.1: Users table
+|||
+|-----------------|----------|
+| id              | integer  |
+| name            | string   |
+| email           | string   |
+| created_at      | datetime |
+| updated_at      | datetime |
+| password_digest | string   |
+| remember_digest | string   |
+| admin           | boolean  |
+| activation_digest           | string  |
+| activated           | boolean  |
+|activated_at|datetime|
+###### *Figure 11.1: The User model with added account activation attributes.*
+
  ##### Table 7.1
 
 |HTTP request |	URL	| Action |	Named route |	Purpose |
