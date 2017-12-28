@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem 'faker',  '1.7.3'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem "figaro"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
@@ -43,6 +44,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem "letter_opener"
+  gem 'letter_opener_web'
 end
 
 group :development do
