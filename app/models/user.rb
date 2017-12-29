@@ -30,27 +30,8 @@ class User < ApplicationRecord
   # Returns true if the given token matches the digest.
   def authenticated?(attribute, token)
    digest = send("#{attribute}_digest")
-   #puts "digest #{digest}"
-   #puts "token #{token}"
    return false if digest.nil?
-   #puts "not nil"
-   #puts " BCrypt::Password.new(digest) #{ BCrypt::Password.new(digest)}"
-   s = BCrypt::Password.new(digest)
-   e = encrypt_token(token)
-
-  check_token(e,s)
-  end
-
-  def encrypt_token(tok)
-      BCrypt::Password.create(tok)
-  end
-
-  def check_token(enc,tok)
-    if enc == tok #We compare it with the unencrypted string.
-      true
-    else
-      false
-    end
+   BCrypt::Password.new(digest).is_password?(token)
   end
 
   # Forgets a user.
