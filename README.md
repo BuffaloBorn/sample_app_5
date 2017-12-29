@@ -216,3 +216,14 @@ $ rails db:migrate:reset
   * A boolean attribute called admin on the User model automatically creates an admin? boolean method on user objects.
   * Admins can delete users through the web by clicking on delete links that issue DELETE requests to the Users controller ```destroy``` action.
   * We can create a large number of test users using embedded Ruby inside fixtures.
+
+#### Account activation
+
+  * Like sessions, account activations can be modeled as a resource despite not being Active Record objects.
+  * Rails can generate Action Mailer actions and views to send email.
+  * Action Mailer supports both plain-text and HTML mail.
+  * As with ordinary actions and views, instance variables defined in mailer actions are available in mailer views.
+  * Account activations use a generated token to create a unique URL for activating users.
+  * Account activations use a hashed activation digest to securely identify valid activation requests.
+  * Both mailer tests and integration tests are useful for verifying the behavior of the User mailer.
+  * We can send email in production using SendGrid.
