@@ -102,7 +102,20 @@ $ rails db:migrate:reset
 | GET	 | /users/1/edit |	edit |	edit_user_path(user)	| page to edit user with id 1 |
 | PATCH| 	/users/1 |	update |	user_path(user)	| update user|
 | DELETE|	/users/1 | destroy |	user_path(user)	| delete user |
+| GET	 |/password_resets/new |	new	|new_password_reset_path||
+| POST	/password_resets	| create	| password_resets_path ||
+| GET	http://ex.co/password_resets/<token>/edit |	edit	| ||edit_password_reset_url(token) ||
+| PATCH	/password_resets/<token> |	update	| password_reset_path(token) ||
 ###### *Table 7.1: RESTful routes provided by the Users resource in Listing 7.3.*
+
+ ##### Table 12.1
+|HTTP request |	URL	| Action |	Named route
+|---------|----------|------------|----------------|
+| GET	 |/password_resets/new |	new	|new_password_reset_path|
+| POST |	/password_resets	| create	| password_resets_path |
+| GET |	http://ex.co/password_resets/<token>/edit |	edit	| edit_password_reset_url(token) |
+| PATCH	| /password_resets/<token> |	update	| password_reset_path(token) |
+###### *12.1: RESTful routes provided by the Password Resets resource in Listing 12.1.*
 
  ##### Table 11.1
 
