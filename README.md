@@ -134,7 +134,7 @@ $ rails db:migrate:reset
 | PATCH	| /password_resets/<token> |	update	| password_reset_path(token) |
 ###### *12.1: RESTful routes provided by the Password Resets resource in Listing 12.1.*
 
-##### Figure 13.1: Users table
+##### Figure 13.1: Micropost table
 |||
 |-----------------|----------|
 | id              | integer  |
@@ -144,6 +144,19 @@ $ rails db:migrate:reset
 | updated_at      | datetime |
 
 ###### *Figure 13.1: The Micropost data model.*
+
+
+##### Table 13.1: User/micropost association methods table 
+
+| Method	        | Purpose                                          |
+|-----------------|--------------------------------------------------|
+|micropost.user	  | Returns the User object associated with the micropost |
+|user.microposts	| Returns a collection of the user’s microposts |
+|user.microposts.create(arg)	| Creates a micropost associated with user |
+|user.microposts.create!(arg)	| Creates a micropost associated with user  (exception on failure)|
+|user.microposts.build(arg)	| Returns a new Micropost object associated with user |
+|user.microposts.find_by(id: 1)	| Finds the micropost with id 1 and user_id equal to user.id |
+###### *Table 13.1: A summary of user/micropost association methods.*
 
 
 ### What we learned in this chapter
