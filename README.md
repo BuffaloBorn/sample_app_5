@@ -240,3 +240,14 @@ $ rails db:migrate:reset
   * Account activations use a hashed activation digest to securely identify valid activation requests.
   * Both mailer tests and integration tests are useful for verifying the behavior of the User mailer.
   * We can send email in production using SendGrid.
+
+#### Password reset
+
+  * Like sessions and account activations, password resets can be modeled as a resource despite not being Active Record objects.
+  * Rails can generate Action Mailer actions and views to send email.
+  * Action Mailer supports both plain-text and HTML mail.
+  * As with ordinary actions and views, instance variables defined in mailer actions are available in mailer views.
+  * Password resets use a generated token to create a unique URL for resetting passwords.
+  * Password resets use a hashed reset digest to securely identify valid reset requests.
+  * Both mailer tests and integration tests are useful for verifying the behavior of the User mailer.
+  * We can send email in production using SendGrid.
