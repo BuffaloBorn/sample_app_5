@@ -108,15 +108,6 @@ $ rails db:migrate:reset
 | PATCH	/password_resets/<token> |	update	| password_reset_path(token) ||
 ###### *Table 7.1: RESTful routes provided by the Users resource in Listing 7.3.*
 
- ##### Table 12.1
-|HTTP request |	URL	| Action |	Named route
-|---------|----------|------------|----------------|
-| GET	 |/password_resets/new |	new	|new_password_reset_path|
-| POST |	/password_resets	| create	| password_resets_path |
-| GET |	http://ex.co/password_resets/<token>/edit |	edit	| edit_password_reset_url(token) |
-| PATCH	| /password_resets/<token> |	update	| password_reset_path(token) |
-###### *12.1: RESTful routes provided by the Password Resets resource in Listing 12.1.*
-
  ##### Table 11.1
 
 | find by	|  string	 |   digest   | authentication |
@@ -133,6 +124,26 @@ $ rails db:migrate:reset
 |---------------|-----|---------|----------------|
 | GET	| http://ex.co/account_activation/<token>/edit	| edit |	edit_account_activation_url(token) |
 ###### * Table 11.2: RESTful route provided by the Account Activations resource in this commit.*
+
+##### Table 12.1
+|HTTP request |	URL	| Action |	Named route
+|---------|----------|------------|----------------|
+| GET	 |/password_resets/new |	new	|new_password_reset_path|
+| POST |	/password_resets	| create	| password_resets_path |
+| GET |	http://ex.co/password_resets/<token>/edit |	edit	| edit_password_reset_url(token) |
+| PATCH	| /password_resets/<token> |	update	| password_reset_path(token) |
+###### *12.1: RESTful routes provided by the Password Resets resource in Listing 12.1.*
+
+##### Figure 13.1: Users table
+|||
+|-----------------|----------|
+| id              | integer  |
+| content         | text     |
+| user_id         | integer  |
+| created_at      | datetime |
+| updated_at      | datetime |
+
+###### *Figure 13.1: The Micropost data model.*
 
 
 ### What we learned in this chapter
