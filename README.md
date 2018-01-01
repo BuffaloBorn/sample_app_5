@@ -91,6 +91,20 @@ $ rails db:migrate:reset
 |activated_at|datetime|
 ###### *Figure 11.1: The User model with added account activation attributes.*
 
+ ##### Table 2.3
+
+| HTTP request |	URL	 | Action	    | Purpose        |
+|------------|-------|------------|----------------|
+| GET	| /microposts	| index	| page to list all microposts |
+| GET	| /microposts/1	| show |	page to show micropost with id |
+| GET	| /microposts/new	| new	| page to make a new micropost |
+| POST |	/microposts	| create |	create a new micropost |
+| GET	| /microposts/1/edit |	edit |	page to edit micropost with id |
+| PATCH |	/microposts/1	| update	| update micropost with id |
+| DELETE |	/microposts/1 |	destroy |	delete micropost with id |
+
+###### *Table 2.3: RESTful routes provided by the Microposts resource in Listing 2.11.*
+
  ##### Table 7.1
 
 |HTTP request |	URL	| Action |	Named route |	Purpose |
@@ -145,8 +159,7 @@ $ rails db:migrate:reset
 
 ###### *Figure 13.1: The Micropost data model.*
 
-
-##### Table 13.1: User/micropost association methods table 
+##### Table 13.1: User/micropost association methods table
 
 | Method	        | Purpose                                          |
 |-----------------|--------------------------------------------------|
@@ -158,6 +171,12 @@ $ rails db:migrate:reset
 |user.microposts.find_by(id: 1)	| Finds the micropost with id 1 and user_id equal to user.id |
 ###### *Table 13.1: A summary of user/micropost association methods.*
 
+
+| HTTP request | 	URL         |	Action  |	Named route                         |
+|--------------|--------------|---------|-------------------------------------|
+| POST	       | /microposts  |	create  | microposts_path                     |
+| DELETE	     | /microposts/1|	destroy	| micropost_path(micropost)           |
+###### *Table 13.2: RESTful routes provided by the Microposts resource in Listing 13.30.*
 
 ### What we learned in this chapter
 

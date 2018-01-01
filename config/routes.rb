@@ -14,4 +14,5 @@ Rails.application.routes.draw do
    mount LetterOpenerWeb::Engine, at: "/letter_opener"
  end
  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :microposts,          only: [:create, :destroy]
 end
