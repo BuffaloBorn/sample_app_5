@@ -15,12 +15,18 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
       post microposts_path, params: { micropost: { content: "" } }
     end
     assert_select 'div#error_explanation'
+    # assert_select 'input[type=FILL_IN]'
+    assert_select 'input[type=file]'
     # Valid submission
     content = "This micropost really ties the room together"
+    picture = fixture_file_upload('test/fixtures/rails.png', 'image/png')
     assert_difference 'Micropost.count', 1 do
-      post microposts_path, params: { micropost: { content: content } }
+      #post microposts_path, params: { micropost: { content: content } }
+      #post microposts_path, micropost: { content: content, picture: FILL_IN }
+      post microposts_path, params: { micropost: { content: content, picture: picture } }
     end
-    assert_redirected_to root_url
+    #assert FILL_IN.picture?
+    assert @user.microposts.first.picture?
     follow_redirect!
     assert_match content, response.body
     # Delete post
