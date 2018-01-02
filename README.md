@@ -192,7 +192,7 @@ $ rails db:migrate:reset
 ###### *Table 13.2: RESTful routes provided by the Microposts resource in Listing 13.30.*
 
 
-For commit: An initializer to skip image resizing in tests, we not able to finish the exercises but I was developing on windows and mini-imagemagic did not work on windows like linux. 
+For commit: An initializer to skip image resizing in tests, we not able to finish the exercises but I was developing on windows and mini-imagemagic did not work on windows like linux.
 
 ### What we learned in this chapter
 
@@ -310,3 +310,20 @@ For commit: An initializer to skip image resizing in tests, we not able to finis
   * Password resets use a hashed reset digest to securely identify valid reset requests.
   * Both mailer tests and integration tests are useful for verifying the behavior of the User mailer.
   * We can send email in production using SendGrid.
+
+#### User microposts
+
+ * Microposts, like Users, are modeled as a resource backed by an Active Record model.
+ * Rails supports multiple-key indices.
+ * We can model a user having many microposts using the has_many and belongs_to methods in the User and Micropost models, respectively.
+ * The has_many/belongs_to combination gives rise to methods that work through the association.
+ * The code user.microposts.build(...) returns a new Micropost object automatically associated with the given user.
+ * Rails supports default ordering via default_scope.
+ * Scopes take anonymous functions as arguments.
+ * The dependent: :destroy option causes objects to be destroyed at the same time as associated objects.
+ * Pagination and object counts can both be performed through associations, leading to automatically efficient code.
+ * Fixtures support the creation of associations.
+ * It is possible to pass variables to Rails partials.
+ * The where method can be used to perform Active Record selections.
+ * We can enforce secure operations by always creating and destroying dependent objects through their association.
+ * We can upload and resize images using CarrierWave.
