@@ -191,6 +191,9 @@ $ rails db:migrate:reset
 | DELETE	     | /microposts/1|	destroy	| micropost_path(micropost)           |
 ###### *Table 13.2: RESTful routes provided by the Microposts resource in Listing 13.30.*
 
+
+For commit: An initializer to skip image resizing in tests, we not able to finish the exercises but I was developing on windows and mini-imagemagic did not work on windows like linux. 
+
 ### What we learned in this chapter
 
 #### Mostly static pages
