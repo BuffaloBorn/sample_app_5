@@ -172,6 +172,19 @@ $ rails db:migrate:reset
 ###### *Table 13.1: A summary of user/micropost association methods.*
 
 
+##### Figure 13.19: Microposts table
+
+|||
+|-----------------|----------|
+| id              | integer  |
+| content         | text     |
+| user_id         | integer  |
+| created_at      | datetime |
+| updated_at      | datetime |
+| picture         | string   |
+###### *Figure 13.19: The Micropost data model with a picture attribute.*
+
+
 | HTTP request | 	URL         |	Action  |	Named route                         |
 |--------------|--------------|---------|-------------------------------------|
 | POST	       | /microposts  |	create  | microposts_path                     |
