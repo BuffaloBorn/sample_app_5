@@ -192,6 +192,20 @@ $ rails db:migrate:reset
 ###### *Table 13.2: RESTful routes provided by the Microposts resource in Listing 13.30.*
 
 
+
+##### Figure 14.8: Microposts table
+
+|||
+|-----------------|----------|
+| id              | integer  |
+| follower_id     | integer  |
+| followed_id     | integer  |
+| created_at      | datetime |
+| updated_at      | datetime |
+
+###### *Figure 14.8: The Relationship data model.*
+
+
 For commit: An initializer to skip image resizing in tests, we not able to finish the exercises but I was developing on windows and mini-imagemagic did not work on windows like linux.
 
 ### What we learned in this chapter
