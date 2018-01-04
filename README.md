@@ -191,6 +191,14 @@ $ rails db:migrate:reset
 | DELETE	     | /microposts/1|	destroy	| micropost_path(micropost)           |
 ###### *Table 13.2: RESTful routes provided by the Microposts resource in Listing 13.30.*
 
+| Method	| Purpose |
+|---------|---------|
+| active_relationship.follower	| Returns the follower |
+| active_relationship.followed	| Returns the followed user |
+| user.active_relationships.create(followed_id: other_user.id)	| Creates an  active relationship associated with user |
+| user.active_relationships.create!(followed_id: other_user.id)	| Creates an active relationship associated with user (exception on failure) |
+| user.active_relationships.build(followed_id: other_user.id)	| Returns a new Relationship object associated with user |
+###### *Table 14.1: A summary of user/active relationship association methods.*
 
 
 ##### Figure 14.8: Microposts table
