@@ -216,6 +216,12 @@ $ rails db:migrate:reset
 
 For commit: An initializer to skip image resizing in tests, we not able to finish the exercises but I was developing on windows and mini-imagemagic did not work on windows like linux.
 
+| HTTP request	| URL	| Action	| Named route
+| GET	| /users/1/following	| following	| following_user_path(1) |
+| GET	| /users/1/followers	| followers |	followers_user_path(1) |
+
+###### *Table 14.2: RESTful routes provided by the custom rules in resource in this commit*
+
 ### What we learned in this chapter
 
 #### Mostly static pages
