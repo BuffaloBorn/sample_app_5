@@ -77,17 +77,6 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  # Defines a proto-feed.
-  # See "Following users" for the full implementation.
-  def feed
-    Micropost.where("user_id = ?", id)
-  end
-
-  # Follows a user.
-  def follow(other_user)
-    following << other_user
-  end
-
   # Unfollows a user.
   def unfollow(other_user)
     following.delete(other_user)
@@ -97,6 +86,23 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  # Returns true if a password reset has expired.
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  # Returns a user's status feed.
+  def feed
+    #Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
+    Micropost.all
+  end
+
+  # Follows a user.
+  def follow(other_user)
+    active_relationships.create(followed_id: other_user.id)
+  end
+
  private
 
   # Converts email to all lower-case.
