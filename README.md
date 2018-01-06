@@ -355,3 +355,13 @@ For commit: An initializer to skip image resizing in tests, we not able to finis
  * The where method can be used to perform Active Record selections.
  * We can enforce secure operations by always creating and destroying dependent objects through their association.
  * We can upload and resize images using CarrierWave.
+
+ #### Following users
+
+ * Rails’ has_many :through allows the modeling of complicated data relationships.
+ * The has_many method takes several optional arguments, including the object class name and the foreign key.
+ * Using has_many and has_many :through with properly chosen class names and foreign keys, we can model both active (following) and passive (being followed) relationships.
+ * Rails routing supports nested routes.
+ * The where method is a flexible and powerful way to create database queries.
+ * Rails supports issuing lower-level SQL queries if needed.
+ * By putting together everything we’ve learned in this book, we’ve successfully implemented user following with a status feed of microposts from followed users.
